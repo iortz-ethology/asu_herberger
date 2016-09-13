@@ -4,7 +4,7 @@ $databases = array (
     array (
       'default' =>
         array (
-          'database' => 'asu_hereberger_drupal_web',
+          'database' => 'asu_herberger_drupal_web',
           'username' => 'root',
           'password' => 'Herberger4u',
           'host' => 'localhost',

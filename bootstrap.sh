@@ -71,8 +71,8 @@ MYSQL_PW="Herberger4u"
 MYSQL_DRUPAL_PW="Herberger4u"
 MYSQL_DRUPAL_PW_URL="Herberger4u"
 DRUPAL_PW="Herberger4u!"
-SITENAME="asu_hereberger"
-URL="dev.asu_hereberger.local"
+SITENAME="asu_herberger"
+URL="dev.asu_herberger.local"
 SSLPORT=443
 WWW_DIR="drupal"
 ENVIRON_PATH="/www/drupal/assets/environ"
@@ -214,7 +214,7 @@ mysql -u root $MYSQL_PW_COMMANDLINE --database ${SITENAME}_drupal_web < ${ENVIRO
 fi
 
 #mysql -u root vjV22m8Ar < /assets/environ/dbbackup/asu_uto_drupal_web.sql
-#mysql -u root -pHerberger4u --database asu_hereberger_drupal_web < /www/drupal/sites/dev-environment/assets/environ/dbbackup/asu_hereberger_drupal_web.sql
+#mysql -u root -pHerberger4u --database asu_herberger_drupal_web < /www/drupal/sites/dev-environment/assets/environ/dbbackup/asu_herberger_drupal_web.sql
 
 # set up for external access
 echo "Set mysql bind address"
