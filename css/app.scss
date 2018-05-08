@@ -45,9 +45,12 @@
 @include foundation-visibility-classes;
 @include foundation-flex-classes;
 
-@include motion-ui-transitions;
-@include motion-ui-animations;
+// @include motion-ui-transitions;
+// @include motion-ui-animations;
 
+// @import 'app';
 @import 'header';
 @import 'main';
 @import 'footer';
+@import 'app-extended';
+@import 'cms';
