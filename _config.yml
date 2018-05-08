@@ -6,4 +6,17 @@ baseurl: ./
 
 sass:
   sass_dir: _scss
-  style: :expanded
+  sourcemap: true
+  style: expanded
+
+port: 8080
+
+exclude: [
+  'node_modules',
+  'gulpfile.js',
+  '.sass-cache',
+  '_assets',
+  'Gemfile',
+  'Gemfile.lock',
+  'package.json'
+]
