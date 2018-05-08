@@ -6,4 +6,4 @@ baseurl: ./
 
 sass:
   sass_dir: _scss
-  style: :compressed
+  style: :expanded

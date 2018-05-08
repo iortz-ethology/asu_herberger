@@ -5,8 +5,7 @@ var $ = require('gulp-load-plugins')();
 var sourcemaps = require('gulp-sourcemaps');
 var filter = require('gulp-filter');
 var imagemin = require('gulp-imagemin');
-var postcss = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
+var autoprefixer = require('gulp-autoprefixer');
 var sasspaths = [
   'node_modules/foundation-sites/scss',
   'node_modules/motion-ui/src'
@@ -22,13 +21,9 @@ gulp.task('copy', function () {
 gulp.task('sass', function () {
   return gulp.src('css/*.scss')
     .pipe(sourcemaps.init())
-    .pipe($.sass({
-      includePaths: sasspaths
-    })).on('error', $.sass.logError)
+    .pipe($.sass({ includePaths: sasspaths })).on('error', $.sass.logError)
     .pipe(gulp.dest('_site/css'))
-    .pipe(postcss([autoprefixer({
-      browsers: ['last 2 versions', 'ie >= 11']
-    })]))
+    .pipe(autoprefixer('last 2 versions'))
     .pipe(sourcemaps.write('.'))
     .pipe(filter('**/*.css'))
     .pipe(browserSync.stream());
