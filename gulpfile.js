@@ -19,7 +19,6 @@ gulp.task('copy', function () {
     .pipe(gulp.dest('js'));
 });
 
-
 gulp.task('sass', function () {
   return gulp.src('css/*.scss')
     .pipe(sourcemaps.init())
