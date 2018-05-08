@@ -1,0 +1,9 @@
+permalink: pretty
+
+title: Meritage Homes Static Site
+url: http://www.meritagehomes.com
+baseurl: ./
+
+sass:
+  sass_dir: _scss
+  style: :compressed

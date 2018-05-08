@@ -1,0 +1,29 @@
+{
+  "name": "meritage-static",
+  "version": "1.0.0",
+  "description": "Meritage Homes static site",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^8.4.1",
+    "browser-sync": "^2.24.4",
+    "foundation-sites": "^6.4.4-rc1",
+    "gulp": "^3.9.1",
+    "gulp-filter": "^5.1.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-shell": "^0.6.5",
+    "gulp-sourcemaps": "^2.6.4",
+    "minify": "^3.0.5",
+    "motion-ui": "^1.2.3",
+    "purgecss": "^0.21.0"
+  },
+  "devDependencies": {
+    "gulp-imagemin": "^4.1.0"
+  }
+}
