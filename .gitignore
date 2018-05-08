@@ -4,3 +4,4 @@ js/jquery.js
 js/what-input.js
 _site
 .sass-cache
+.jekyll-metadata
