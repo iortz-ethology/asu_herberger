@@ -16,16 +16,13 @@ var sasspaths = [
 gulp.task('build', shell.task(['jekyll serve --incremental']));
 
 gulp.task('copy', function () {
-  return gulp.src([
-    './node_modules/jquery/dist/jquery.js',
-    './node_modules/what-input/dist/what-input.js',
-    './node_modules/foundation-sites/dist/js/foundation.min.js'])
+  return gulp.src('js')
     .pipe(gulp.dest('js'));
 });
 
 gulp.task('sass', function () {
   return gulp.src('css/*.scss')
-    .pipe($.sass({ includePaths: sasspaths })).on('error', $.sass.logError)
+    .pipe($.sass()).on('error', $.sass.logError)
     .pipe(sourcemaps.init())
     .pipe(postcss([autoprefixer()]))
     .pipe(sourcemaps.write('.'))

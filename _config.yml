@@ -11,9 +11,8 @@ sass:
 
 port: 8080
 
-exclude: [
-  'node_modules',
-  'gulpfile.js',
-  '.sass-cache',
-  'package.json'
-]
+exclude:
+  - node_modules
+  - gulpfile.js
+  - .sass-cache
+  - package.json

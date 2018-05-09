@@ -106,9 +106,10 @@
   }
 }
 
-@import 'mth';
+@import 'prod/app';
+@import 'prod/app-extended';
+// @import 'prod/cms';
+
 @import 'header';
 @import 'footer';
-@import 'app-extended';
-@import 'cms';
 @import 'main';
