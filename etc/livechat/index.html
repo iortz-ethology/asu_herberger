@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="en">
+    <head>
+        <title>Meritage Homes Live Chat</title>
+        <script type="text/javascript">
+            (function() {
+                function handlePageLoad() {
+                    var endpointMatcher = new RegExp("[\\?\\&]endpoint=([^&#]*)");
+                    document.getElementById('prechatForm').setAttribute('action',
+                        decodeURIComponent(endpointMatcher.exec(document.location.search)[1]));
+                }
+                if (window.addEventListener) {
+                    window.addEventListener('load', handlePageLoad, false);
+                } else {
+                    window.attachEvent('onload', handlePageLoad, false);
+                }
+            })();
+        </script>
+        <!--<link type="text/css" rel="stylesheet" href="http://backyard.dev.laneterralever.com/css/app.css">-->
+        <link type="text/css" rel="stylesheet" href="/css/app.css">
+        <script src="https://use.typekit.net/iqx2twd.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    </head>
+    <body style="padding-top: .55556rem;">
+        <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-28885228-1', 'auto', {
+                'allowLinker': true
+            });
+            ga('require', 'linker');
+            ga('linker:autoLink', ['meritagehomes.com']);
+            ga('send', 'pageview');
+        </script>
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MV5JJ2" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
+        <script>
+            (function(w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start': new Date().getTime(),
+                    event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src =
+                    '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-MV5JJ2');
+        </script>
+        <div class="row">
+            <div class="columns form-area">
+                <img src="/etc/logos/logo-meritage-blue.png" alt="Meritage Homes" class="logo" style="margin-bottom: 1rem;" />
+                <!--<img src="{!URLFOR($Resource.MeritageLogo)}" alt="Meritage Homes" class="logo" style="margin-bottom: 1rem;" />-->
+                <h2 style="margin-left: 0; margin-right: 0; max-width: none;">First, tell us a bit about yourself.</h2>
+                <form method="post" id="prechatForm" class="c-form" onsubmit="return validateMyForm();">
+                    <input placeholder="First Name*" id="firstName" aria-label="Enter your first name" type="text" required="required" class="js-required-field" name="liveagent.prechat:contactFirstName" />
+                    <input placeholder="Last Name*" id="lastName" aria-label="Enter your last name" type="text" name="liveagent.prechat:contactLastName" />
+                    <input placeholder="Email Address*" aria-label="Enter your email address" required="required" class="js-required-field" id="validate-email" type="text" name="liveagent.prechat:contactEmail" />
+                    <input placeholder="Phone Number" aria-label="Enter your phone number" id="js-phone" type="text" name="liveagent.prechat:contactPhone" />
+                    <a id="prechat_submit" class="button button--black" onclick="ga('send', 'event', 'Chat', 'Click', 'Begin Chat');" style="margin-top: 0; margin-bottom: 0;" type="submit" />Chat Now</a>
+                    <input id="prechatName" type="hidden" name="liveagent.prechat.name" value="" />
+                    <input type="hidden" name="liveagent.prechat:contactIsPerson" value="Person Account" />
+                    <input type="hidden" name="liveagent.prechat.findOrCreate.displayToAgent:contactFirstName" />
+                    <input type="hidden" name="liveagent.prechat.findOrCreate.displayToAgent:contactLastName" />
+                    <span class="js-delete-no-phone">
+                        <input type="hidden" name="liveagent.prechat.findorcreate.map:Contact" value="FirstName,contactFirstName;LastName,contactLastName;PhoneNumber__c,contactPhone" />
+                        <input type="hidden" name="liveagent.prechat.findorcreate.map.doFind:Contact" value="PhoneNumber__c,true" />
+                        <input type="hidden" name="liveagent.prechat.findorcreate.map.isExactMatch:Contact" value="PhoneNumber__c,true" />
+                        <input type="hidden" name="liveagent.prechat.findorcreate.saveToTranscript:Contact" value="Contact" />
+                        <input type="hidden" name="liveagent.prechat.findorcreate.showOnCreate:Contact" value="true" />
+                    </span>
+                    <input type="hidden" name="liveagent.prechat.findorcreate.map:Contact" value="FirstName,contactFirstName;LastName,contactLastName;Email,contactEmail" />
+                    <input type="hidden" name="liveagent.prechat.findorcreate.map.doFind:Contact" value="Email,true" />
+                    <input type="hidden" name="liveagent.prechat.findorcreate.map.isExactMatch:Contact" value="Email,true" />
+                    <input type="hidden" name="liveagent.prechat.findorcreate.saveToTranscript:Contact" value="Contact" />
+                    <input type="hidden" name="liveagent.prechat.findorcreate.showOnCreate:Contact" value="true" />
+                </form>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>document.getElementById("prechat_submit").onclick = function() { document.getElementById("prechatForm").submit(); }</script>
+        <script type="text/javascript">
+            // validate email address
+            function is_email(email) {
+                var emailReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]+$/;
+                return emailReg.test(email);
+            }
+            function is_populated(value) {
+                if (value !== '' && value !== '|' && typeof value !== 'undefined') {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            // Check form validation before form submission
+            function validateMyForm() {
+                var email = $('#validate-email').val();
+                var required_fields = $('.js-required-field');
+                var good_to_go = true;
+                $.each(required_fields, function() {
+                    if (is_populated($(this).val())) {
+                        // valid
+                        $(this).removeClass('has-error');
+                    } else {
+                        // invalid
+                        good_to_go = false;
+                        $(this).addClass('has-error');
+                    }
+                });
+                if (!is_email(email)) {
+                    good_to_go = false;
+                    $('#validate-email').addClass('has-error');
+                    // Bind a value check so we hide the error when the email is valid
+                    $('#validate-email').bind('keyup', function() {
+                        var email = $(this).val();
+                        if (is_email(email)) {
+                            $(this).removeClass('has-error');
+                        }
+                    });
+                } else {
+                    $('#validate-email').removeClass('has-error');
+                    if ($('#js-phone').val() === '') {
+                        $('.js-delete-no-phone').remove();
+                    } else {
+                        var phoneNum = $('#js-phone').val().replace(/\D/g, '');
+                        $('#js-phone').val(phoneNum);
+                    }
+                }
+                // Submit the form, or not
+                if (good_to_go) {
+                    // set hidden chat api name field to pull customer name into chat
+                    $('#prechatName').val($('#firstName').val() + ' ' + $('#lastName').val());
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>
